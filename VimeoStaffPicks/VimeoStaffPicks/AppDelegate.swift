@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Set the size of the window to the size of the screen on the device
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        // Make our view controller the root view controller to be launched by the app
+        self.window?.rootViewController = StaffPicksViewController()
+        
+        // Make the window the primary window
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
