@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         // Make our view controller the root view controller to be launched by the app
-        self.window?.rootViewController = StaffPicksViewController()
+        self.window?.rootViewController = StaffPicksViewController(nibName: "StaffPicksViewController", bundle: nil)
         
         // Make the window the primary window
         self.window?.makeKeyAndVisible()

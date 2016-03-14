@@ -10,8 +10,8 @@
 		41E2B3CF1C962C2B0021489A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E2B3CE1C962C2B0021489A /* AppDelegate.swift */; };
 		41E2B3D61C962C2B0021489A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41E2B3D51C962C2B0021489A /* Assets.xcassets */; };
 		41E2B3D91C962C2B0021489A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E2B3D71C962C2B0021489A /* LaunchScreen.storyboard */; };
-		41FE63491C970E7400D95CA0 /* StaffPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE63471C970E7400D95CA0 /* StaffPicksViewController.swift */; };
-		41FE634C1C970F2A00D95CA0 /* StaffPicksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FE634B1C970F2A00D95CA0 /* StaffPicksViewController.storyboard */; };
+		41FE63511C9740FF00D95CA0 /* StaffPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE634F1C9740FF00D95CA0 /* StaffPicksViewController.swift */; };
+		41FE63521C9740FF00D95CA0 /* StaffPicksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		41E2B3D51C962C2B0021489A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41E2B3D81C962C2B0021489A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41E2B3DA1C962C2B0021489A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41FE63471C970E7400D95CA0 /* StaffPicksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicksViewController.swift; sourceTree = "<group>"; };
-		41FE634B1C970F2A00D95CA0 /* StaffPicksViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StaffPicksViewController.storyboard; sourceTree = "<group>"; };
+		41FE634F1C9740FF00D95CA0 /* StaffPicksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicksViewController.swift; sourceTree = "<group>"; };
+		41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StaffPicksViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				41E2B3CE1C962C2B0021489A /* AppDelegate.swift */,
-				41FE63471C970E7400D95CA0 /* StaffPicksViewController.swift */,
 				41E2B3D51C962C2B0021489A /* Assets.xcassets */,
 				41E2B3D71C962C2B0021489A /* LaunchScreen.storyboard */,
 				41E2B3DA1C962C2B0021489A /* Info.plist */,
-				41FE634B1C970F2A00D95CA0 /* StaffPicksViewController.storyboard */,
+				41FE634F1C9740FF00D95CA0 /* StaffPicksViewController.swift */,
+				41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */,
 			);
 			path = VimeoStaffPicks;
 			sourceTree = "<group>";
@@ -123,9 +123,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41FE634C1C970F2A00D95CA0 /* StaffPicksViewController.storyboard in Resources */,
 				41E2B3D91C962C2B0021489A /* LaunchScreen.storyboard in Resources */,
 				41E2B3D61C962C2B0021489A /* Assets.xcassets in Resources */,
+				41FE63521C9740FF00D95CA0 /* StaffPicksViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41FE63491C970E7400D95CA0 /* StaffPicksViewController.swift in Sources */,
+				41FE63511C9740FF00D95CA0 /* StaffPicksViewController.swift in Sources */,
 				41E2B3CF1C962C2B0021489A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
