@@ -23,6 +23,8 @@ class StaffPicksViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         self.title = "Staff Picks"
         self.setupTableView()
+        
+        self.refreshItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +51,12 @@ class StaffPicksViewController: UIViewController, UITableViewDataSource {
         cell.nameLabel?.text = self.items[indexPath.row]
         
         return cell
+    }
+    
+    func refreshItems() {
+        VimeClient.staffPicks { (object, error) -> Void in
+            print("error: \(error)\n object: \(object)")
+        }
     }
 
 }

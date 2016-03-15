@@ -14,6 +14,7 @@
 		41FE63521C9740FF00D95CA0 /* StaffPicksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */; };
 		41FE63551C9747F000D95CA0 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE63531C9747F000D95CA0 /* VideoCell.swift */; };
 		41FE63561C9747F000D95CA0 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FE63541C9747F000D95CA0 /* VideoCell.xib */; };
+		41FE63581C985A3200D95CA0 /* VimeoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE63571C985A3200D95CA0 /* VimeoClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StaffPicksViewController.xib; sourceTree = "<group>"; };
 		41FE63531C9747F000D95CA0 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		41FE63541C9747F000D95CA0 /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		41FE63571C985A3200D95CA0 /* VimeoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimeoClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */,
 				41FE63531C9747F000D95CA0 /* VideoCell.swift */,
 				41FE63541C9747F000D95CA0 /* VideoCell.xib */,
+				41FE63571C985A3200D95CA0 /* VimeoClient.swift */,
 			);
 			path = VimeoStaffPicks;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				41FE63511C9740FF00D95CA0 /* StaffPicksViewController.swift in Sources */,
 				41E2B3CF1C962C2B0021489A /* AppDelegate.swift in Sources */,
 				41FE63551C9747F000D95CA0 /* VideoCell.swift in Sources */,
+				41FE63581C985A3200D95CA0 /* VimeoClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
