@@ -18,8 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set the size of the window to the size of the screen on the device
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        // Make our view controller the root view controller to be launched by the app
-        self.window?.rootViewController = StaffPicksViewController(nibName: "StaffPicksViewController", bundle: nil)
+        // Set up our view controller and navigation controller
+        let viewController = StaffPicksViewController(nibName: "StaffPicksViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        // Make our navigation controller the root view controller to be launched by the app
+        self.window?.rootViewController = navigationController
         
         // Make the window the primary window
         self.window?.makeKeyAndVisible()

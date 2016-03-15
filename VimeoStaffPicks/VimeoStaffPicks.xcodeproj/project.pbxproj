@@ -12,6 +12,8 @@
 		41E2B3D91C962C2B0021489A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E2B3D71C962C2B0021489A /* LaunchScreen.storyboard */; };
 		41FE63511C9740FF00D95CA0 /* StaffPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE634F1C9740FF00D95CA0 /* StaffPicksViewController.swift */; };
 		41FE63521C9740FF00D95CA0 /* StaffPicksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */; };
+		41FE63551C9747F000D95CA0 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE63531C9747F000D95CA0 /* VideoCell.swift */; };
+		41FE63561C9747F000D95CA0 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FE63541C9747F000D95CA0 /* VideoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		41E2B3DA1C962C2B0021489A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FE634F1C9740FF00D95CA0 /* StaffPicksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffPicksViewController.swift; sourceTree = "<group>"; };
 		41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StaffPicksViewController.xib; sourceTree = "<group>"; };
+		41FE63531C9747F000D95CA0 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		41FE63541C9747F000D95CA0 /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				41E2B3DA1C962C2B0021489A /* Info.plist */,
 				41FE634F1C9740FF00D95CA0 /* StaffPicksViewController.swift */,
 				41FE63501C9740FF00D95CA0 /* StaffPicksViewController.xib */,
+				41FE63531C9747F000D95CA0 /* VideoCell.swift */,
+				41FE63541C9747F000D95CA0 /* VideoCell.xib */,
 			);
 			path = VimeoStaffPicks;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41E2B3D91C962C2B0021489A /* LaunchScreen.storyboard in Resources */,
+				41FE63561C9747F000D95CA0 /* VideoCell.xib in Resources */,
 				41E2B3D61C962C2B0021489A /* Assets.xcassets in Resources */,
 				41FE63521C9740FF00D95CA0 /* StaffPicksViewController.xib in Resources */,
 			);
@@ -138,6 +145,7 @@
 			files = (
 				41FE63511C9740FF00D95CA0 /* StaffPicksViewController.swift in Sources */,
 				41E2B3CF1C962C2B0021489A /* AppDelegate.swift in Sources */,
+				41FE63551C9747F000D95CA0 /* VideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
