@@ -54,9 +54,16 @@ class StaffPicksViewController: UIViewController, UITableViewDataSource {
     }
     
     func refreshItems() {
-        VimeClient.staffPicks { (object, error) -> Void in
-            print("error: \(error)\n object: \(object)")
+        VimeoClient.staffPicks { (videos, error) -> Void in
+            
+            if let videos = videos {
+                for video in videos {
+                    print(video.name)
+                }
+            }
+            
         }
+        
     }
 
 }

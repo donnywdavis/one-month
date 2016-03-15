@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias ServerResponseCallback = (object: Dictionary<String, AnyObject>?, error: NSError?) -> Void
+typealias ServerResponseCallback = (videos: Array<Video>?, error: NSError?) -> Void
 
-class VimeClient {
+class VimeoClient {
     
     static let errorDomain = "VimeoClientErroDomain"
     static let baseURLString = "https://api.vimeo.com"
@@ -24,7 +24,7 @@ class VimeClient {
         
         if url == nil {
             let error = NSError(domain: errorDomain, code: 0, userInfo: [NSLocalizedDescriptionKey: "Unable to create URL"])
-            callback(object: nil, error: error)
+            callback(videos: nil, error: error)
             
             return
         }
@@ -35,11 +35,39 @@ class VimeClient {
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print(response)
-            print(responseString)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                // Check if we get an error back
+                if error != nil {
+                    callback(videos: nil, error: error)
+                    return
+                }
+                
+                // Parse out the JSON data received into a dictionary
+                var json: [String: AnyObject]?
+                do {
+                    json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableLeaves) as? Dictionary<String, AnyObject>
+                } catch let error as NSError {
+                    callback(videos: nil, error: error)
+                    return
+                }
+                
+                var videoArray = Array<Video>()
+                if let json = json {
+                    let dataArray = json["data"] as? Array<Dictionary<String, AnyObject>>
+                    
+                    if let dataArray = dataArray {
+                        for value in dataArray {
+                            let video = Video(dictionary: value)
+                            videoArray.append(video)
+                        }
+                    }
+                }
+
+                callback(videos: videoArray, error: nil)
+                
+            })
             
-            callback(object: nil, error: nil)
         }
         
         task.resume()
