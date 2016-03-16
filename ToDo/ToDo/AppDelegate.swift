@@ -16,13 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.magentaColor()
+        // Create a view controller and attach it to a navigation controller
+        let viewController = ToDoListViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
         
         // Set the bounds of our window to the screen of the device
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
         // Set the root view controller for the window
-        self.window?.rootViewController = viewController
+        self.window?.rootViewController = navigationController
+        
         // Make this the key window for the app
         self.window?.makeKeyAndVisible()
         
