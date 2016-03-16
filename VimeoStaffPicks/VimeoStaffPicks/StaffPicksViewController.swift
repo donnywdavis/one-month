@@ -12,7 +12,7 @@ class StaffPicksViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView?
     
-    let items = ["donny", "shannon", "lee", "mattan", "syd", "zach"]
+    var items: Array<Video> = []
     
     
     // MARK: View lifecycle
@@ -48,7 +48,8 @@ class StaffPicksViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(VideoCell.self))! as! VideoCell
         
-        cell.nameLabel?.text = self.items[indexPath.row]
+        let video = self.items[indexPath.row]
+        cell.video = video
         
         return cell
     }
@@ -57,9 +58,8 @@ class StaffPicksViewController: UIViewController, UITableViewDataSource {
         VimeoClient.staffPicks { (videos, error) -> Void in
             
             if let videos = videos {
-                for video in videos {
-                    print(video.name)
-                }
+                self.items = videos
+                self.tableView?.reloadData()
             }
             
         }
