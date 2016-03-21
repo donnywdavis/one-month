@@ -40,6 +40,7 @@ class ToDoListViewController: UIViewController, UITableViewDataSource {
         // Create a view controller to add items and add it to a navigation controller
         let viewController = AddItemViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.view.backgroundColor = UIColor.whiteColor()
         
         self.presentViewController(navigationController, animated: true, completion: nil)
         
