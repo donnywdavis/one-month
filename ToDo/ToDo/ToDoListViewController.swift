@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToDoListViewController: UIViewController, UITableViewDataSource {
+class ToDoListViewController: UIViewController, UITableViewDataSource, AddItemViewControllerProtocol {
     
     @IBOutlet weak var tableView: UITableView?
     
@@ -39,6 +39,7 @@ class ToDoListViewController: UIViewController, UITableViewDataSource {
         
         // Create a view controller to add items and add it to a navigation controller
         let viewController = AddItemViewController()
+        viewController.delegate = self
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.view.backgroundColor = UIColor.whiteColor()
         
@@ -70,6 +71,18 @@ class ToDoListViewController: UIViewController, UITableViewDataSource {
         
         return cell
         
+    }
+  
+  
+    // MARK: AddItemViewControllerProtocol
+  
+    func addItem(item: String) {
+        // Add new item to the items array
+        self.items.insertObject(item, atIndex: 0)
+        
+        // Insert the new item to the table view
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView?.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
     }
 
 }
