@@ -49,7 +49,11 @@ class ToDoListViewController: UIViewController, UITableViewDataSource, AddItemVi
     
     override func setEditing(editing: Bool, animated: Bool) {
         
+        super.setEditing(editing, animated: animated)
         
+        self.tableView?.setEditing(editing, animated: animated)
+        
+        self.navigationItem.rightBarButtonItem?.enabled = !editing
         
     }
     
@@ -70,6 +74,15 @@ class ToDoListViewController: UIViewController, UITableViewDataSource, AddItemVi
         cell.textLabel?.text = item
         
         return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            self.items.removeObjectAtIndex(indexPath.row)
+            self.tableView?.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
+        }
         
     }
   
