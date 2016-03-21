@@ -14,10 +14,16 @@ class ToDoListViewController: UIViewController, UITableViewDataSource, AddItemVi
     
     var items = NSMutableArray()
     let cellIdentifier = "CellIdentifier"
+    let cacheKey = "CacheKey"
+    
+    var cache: CacheProtocol = KeyedArchiverCache() // UserDefaultsCache()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        // Load persisted data if any exists
+        self.load()
         
         // Set the title for the view
         self.title = "Todo List"
@@ -82,6 +88,9 @@ class ToDoListViewController: UIViewController, UITableViewDataSource, AddItemVi
         if editingStyle == UITableViewCellEditingStyle.Delete {
             self.items.removeObjectAtIndex(indexPath.row)
             self.tableView?.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
+            
+            // Save the current data set to disk
+            self.save()
         }
         
     }
@@ -96,6 +105,28 @@ class ToDoListViewController: UIViewController, UITableViewDataSource, AddItemVi
         // Insert the new item to the table view
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView?.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
+        
+        // Save the current data set to disk
+        self.save()
+    }
+    
+    
+    // MARK: Cache Actions
+    
+    func load() {
+        
+        let object = self.cache.loadObjectForKey(cacheKey)
+        
+        if let object = object as? NSArray {
+            self.items = NSMutableArray(array: object)
+        }
+        
+    }
+    
+    func save() {
+        
+        self.cache.saveObject(self.items, key: cacheKey)
+        
     }
 
 }

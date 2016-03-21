@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		416AD2D81CA077DF0095BA6F /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416AD2D71CA077DF0095BA6F /* CacheProtocol.swift */; };
+		416AD2DA1CA07CB10095BA6F /* UserDefaultsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416AD2D91CA07CB10095BA6F /* UserDefaultsCache.swift */; };
+		416AD2DC1CA080DC0095BA6F /* KeyedArchiverCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416AD2DB1CA080DC0095BA6F /* KeyedArchiverCache.swift */; };
 		41A2AE9C1C99884900CEC318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2AE9B1C99884900CEC318 /* AppDelegate.swift */; };
 		41A2AEA31C99884900CEC318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A2AEA21C99884900CEC318 /* Assets.xcassets */; };
 		41A2AEA61C99884900CEC318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41A2AEA41C99884900CEC318 /* LaunchScreen.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		416AD2D71CA077DF0095BA6F /* CacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
+		416AD2D91CA07CB10095BA6F /* UserDefaultsCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsCache.swift; sourceTree = "<group>"; };
+		416AD2DB1CA080DC0095BA6F /* KeyedArchiverCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyedArchiverCache.swift; sourceTree = "<group>"; };
 		41A2AE981C99884900CEC318 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A2AE9B1C99884900CEC318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41A2AEA21C99884900CEC318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				41A2AEAE1C999A3100CEC318 /* ToDoListViewController.xib */,
 				41A2AEB11C9A072800CEC318 /* AddItemViewController.swift */,
 				41A2AEB21C9A072800CEC318 /* AddItemViewController.xib */,
+				416AD2D71CA077DF0095BA6F /* CacheProtocol.swift */,
+				416AD2D91CA07CB10095BA6F /* UserDefaultsCache.swift */,
+				416AD2DB1CA080DC0095BA6F /* KeyedArchiverCache.swift */,
 				41A2AEA21C99884900CEC318 /* Assets.xcassets */,
 				41A2AEA41C99884900CEC318 /* LaunchScreen.storyboard */,
 				41A2AEA71C99884900CEC318 /* Info.plist */,
@@ -143,9 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416AD2D81CA077DF0095BA6F /* CacheProtocol.swift in Sources */,
 				41A2AEAF1C999A3100CEC318 /* ToDoListViewController.swift in Sources */,
 				41A2AE9C1C99884900CEC318 /* AppDelegate.swift in Sources */,
+				416AD2DA1CA07CB10095BA6F /* UserDefaultsCache.swift in Sources */,
 				41A2AEB31C9A072800CEC318 /* AddItemViewController.swift in Sources */,
+				416AD2DC1CA080DC0095BA6F /* KeyedArchiverCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 				41A2AEAC1C99884900CEC318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
